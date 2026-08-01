@@ -6,8 +6,10 @@ A modern and responsive weather application built with **React**, **Vite**, and 
 
 ## 🚀 Live Demo
 
+Live Link: https://wahid-weather.netlify.app
+
 ```
-https://your-live-demo.vercel.app
+https://wahid-weather.netlify.app
 ```
 
 ---
