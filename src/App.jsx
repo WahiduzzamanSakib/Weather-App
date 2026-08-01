@@ -15,22 +15,22 @@ function App() {
       <div className="mx-auto max-w-7xl px-4 py-8">
 
         <Navbar />
-        {/* <SearchBar setWeather={setWeather} />
+          {/* <SearchBar setWeather={setWeather} />  */}
 
         <div className="grid gap-6 lg:grid-cols-3">
           <div className="lg:col-span-1">
-            <CurrentWeather weather={weather} />
+            {/* <CurrentWeather weather={weather} /> */}
           </div>
 
           <div className="lg:col-span-2">
-            <Highlights weather={weather} />
+            {/* <Highlights weather={weather} /> */}
           </div>
         </div>
 
-        <HourlyForecast weather={weather} />
-        <DailyForecast weather={weather} />
+        {/* <HourlyForecast weather={weather} /> */}
+        {/* <DailyForecast weather={weather} /> */}
 
-        <Footer /> */}
+        <Footer /> 
       </div>
     </div>
   );
