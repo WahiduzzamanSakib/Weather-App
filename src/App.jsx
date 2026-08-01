@@ -23,7 +23,7 @@ function App() {
           </div>
 
           <div className="lg:col-span-2">
-            {/* <Highlights weather={weather} /> */}
+            <Highlights weather={weather} />
           </div>
         </div>
 
