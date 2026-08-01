@@ -39,16 +39,13 @@ function SearchBar({ setWeather, setLoading }) {
       alert("Geolocation is not supported");
       return;
     }
-
     setLoading(true);
     navigator.geolocation.getCurrentPosition(
       async (position) => {
         try {
           setLoading(true);
-
           const latitude = position.coords.latitude;
           const longitude = position.coords.longitude;
-
           const weatherData = await getWeather(latitude, longitude);
 
           setWeather({
