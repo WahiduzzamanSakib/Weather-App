@@ -2,13 +2,15 @@ import { FaSearch, FaLocationArrow } from "react-icons/fa";
 import { useState } from "react";
 import { getCoordinates, getWeather } from "../api/weatherApi";
 
-function SearchBar({ setWeather }) {
+function SearchBar({ setWeather, setLoading }) {
   const [city, setCity] = useState("");
 
   const handleSearch = async () => {
     if (!city.trim()) return;
 
     try {
+      setLoading(true);
+
       const location = await getCoordinates(city);
 
       const weatherData = await getWeather(
@@ -23,9 +25,10 @@ function SearchBar({ setWeather }) {
       });
 
       setCity("");
-
     } catch (error) {
       alert(error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -36,16 +39,17 @@ function SearchBar({ setWeather }) {
       alert("Geolocation is not supported");
       return;
     }
+
+    setLoading(true);
     navigator.geolocation.getCurrentPosition(
       async (position) => {
         try {
+          setLoading(true);
+
           const latitude = position.coords.latitude;
           const longitude = position.coords.longitude;
 
-          const weatherData = await getWeather(
-            latitude,
-            longitude
-          );
+          const weatherData = await getWeather(latitude, longitude);
 
           setWeather({
             city: "Your Location",
@@ -57,9 +61,12 @@ function SearchBar({ setWeather }) {
 
         } catch (error) {
           alert(error.message);
+        } finally {
+          setLoading(false);
         }
       },
       () => {
+        setLoading(false);
         alert("Location permission denied");
       }
     );
