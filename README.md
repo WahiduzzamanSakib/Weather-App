@@ -8,9 +8,11 @@ A modern and responsive weather application built with **React**, **Vite**, and 
 
 Live Link: https://wahid-weather.netlify.app
 
+<!---
 ```
 https://wahid-weather.netlify.app
 ```
+-->
 
 ---
 ## ✨ Features
@@ -101,7 +103,7 @@ Users can click the **My Location** button to automatically view weather informa
 ---
 ---
 
-## 🔮 Future Improvements
+<!-- ## 🔮 Future Improvements
 
 * Celsius / Fahrenheit Toggle
 * Search History
@@ -113,7 +115,7 @@ Users can click the **My Location** button to automatically view weather informa
 * Air Quality Index
 * Sunrise & Sunset
 * UV Index
----
+--- --->
 
 <!-- ## 📄 License
 
