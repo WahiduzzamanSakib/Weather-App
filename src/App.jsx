@@ -13,7 +13,7 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   return (
-    <div className="min-h-screen bg-sky-100">
+    <div className="min-h-screen bg-gradient-to-r from-gray-300 to-blue-300">
       <div className="mx-auto max-w-7xl px-4 py-8">
         <Navbar />
 
