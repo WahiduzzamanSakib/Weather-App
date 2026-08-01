@@ -28,7 +28,7 @@ function App() {
         </div>
 
         <HourlyForecast weather={weather} />
-        {/* <DailyForecast weather={weather} /> */}
+        <DailyForecast weather={weather} />
 
         <Footer /> 
       </div>
